@@ -9,9 +9,9 @@
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <properties>
-        <spring-version>5.3.14</spring-version>
-    </properties>
+<!--    <properties>-->
+<!--        <spring-version>5.3.14</spring-version>-->
+<!--    </properties>-->
 
     <dependencies>
         <dependency>
@@ -35,9 +35,10 @@
             <version>1.18.20.0</version>
         </dependency>
     </dependencies>
-<!--    <properties>-->
-<!--        <maven.compiler.source>8</maven.compiler.source>-->
-<!--        <maven.compiler.target>8</maven.compiler.target>-->
-<!--    </properties>-->
+    <properties>
+        <spring-version>5.3.14</spring-version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
 
 </project>
