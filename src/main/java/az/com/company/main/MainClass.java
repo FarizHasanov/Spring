@@ -26,7 +26,7 @@ public class MainClass {
                 break;
 
             case "add":
-                Student student=new Student();
+                Student student = new Student();
                 student.setName(scanner.next());
                 student.setSurname(scanner.next());
                 student.setDob(dateFormat.parse(scanner.next()));
@@ -36,17 +36,33 @@ public class MainClass {
                 System.out.println("Student successfully added!");
                 break;
             case "update":
-
+                Student studentUp = new Student();
+                studentUp.setId(Long.parseLong(scanner.next()));
+                studentUp.setName(scanner.next());
+                studentUp.setSurname(scanner.next());
+                studentUp.setDob(dateFormat.parse(scanner.next()));
+                studentUp.setAddress(scanner.next());
+                studentUp.setPhone(scanner.next());
+                studentDao.updateStudent(studentUp);
                 break;
-            case "":
-
+            case "studentById":
+                Student studentGetById = new Student();
+                Student studentById = studentDao.getStudentById(Long.parseLong(scanner.next()));
+                System.out.println(studentById);
                 break;
             case "delete":
-
+                Student studentDlt = new Student();
+                studentDao.deleteStudent(Long.parseLong(scanner.next()));
+                System.out.println("Student successfully deleted!");
                 break;
             case "studentCount":
+                Student studentCnt=new Student();
+                Long studentCount= studentDao.studentCount();
+                System.out.println(studentCount);
 
                 break;
+            default:
+                System.out.println("Emelliyyati duzgun secin!");
         }
 
     }
